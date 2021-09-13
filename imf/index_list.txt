@@ -1,0 +1,442 @@
+Frequency: 
+
+Annual : A
+Bi-annual : B
+Quarterly : Q
+Monthly : M
+Daily : D
+Weekly : W
+
+Countries
+
+Afghanistan : AF
+Albania : AL
+Algeria : DZ
+American Samoa : AS
+Andorra : AD
+Angola : AO
+Anguilla : AI
+Antigua and Barbuda : AG
+Argentina : AR
+Armenia : AM
+Aruba : AW
+Australia : AU
+Austria : AT
+Azerbaijan : AZ
+Bahamas : BS
+Bahrain : BH
+Bangladesh : BD
+Barbados : BB
+Belarus : BY
+Belgium : BE
+Belize : BZ
+Benin : BJ
+Bermuda : BM
+Bhutan : BT
+Bolivia : BO
+Bonaire, Saint Eustatius and Saba : BQ
+Bosnia and Herzegovina : BA
+Botswana : BW
+Bouvet Island : BV
+Brazil : BR
+British Indian Ocean territory : IO
+Brunei Darussalam : BN
+Bulgaria : BG
+Burkina Faso : BF
+Burundi : BI
+Cabo Verde : CV
+Cambodia : KH
+Cameroon : CM
+Canada : CA
+Cayman Islands : KY
+Central African Republic : CF
+Chad : TD
+Chile : CL
+Hong Kong : HK
+Macao : MO
+China : CN
+Christmas Island : CX
+Cocos (Keeling) Islands : CC
+Colombia : CO
+Comoros : KM
+Congo, the Democratic Republic of the : CD
+Congo : CG
+Cook Islands : CK
+Costa Rica : CR
+Cote d`Ivoire : CI
+Croatia : HR
+Cuba : CU
+Curacao : CW
+Cyprus : CY
+Czech Republic : CZ
+Denmark : DK
+Djibouti : DJ
+Dominica : DM
+Dominican Republic : DO
+Ecuador : EC
+Egypt : EG
+El Salvador : SV
+Equatorial Guinea : GQ
+Eritrea : ER
+Estonia : EE
+Ethiopia : ET
+Falkland Islands (Malvinas) : FK
+Faroe Islands : FO
+Fiji : FJ
+Finland : FI
+France : FR
+French Southern Territories : TF
+French Polynesia : PF
+New Caledonia : NC
+Gabon : GA
+Gambia : GM
+Georgia : GE
+Germany : DE
+Ghana : GH
+Gibraltar : GI
+Greece : GR
+Greenland : GL
+Grenada : GD
+Guadeloupe : GP
+Guam : GU
+Guatemala : GT
+Guernsey : GG
+French Guiana : GF
+Guinea : GN
+Guinea-Bissau : GW
+Guyana : GY
+Haiti : HT
+Heard Island and McDonald Islands : HM
+Honduras : HN
+Hungary : HU
+Iceland : IS
+India : IN
+Indonesia : ID
+Iran, Islamic Republic of : IR
+Iraq : IQ
+Ireland : IE
+Isle of Man : IM
+Israel : IL
+Italy : IT
+Jamaica : JM
+Japan : JP
+Jersey : JE
+Jordan : JO
+Kazakhstan : KZ
+Kenya : KE
+Kiribati : KI
+Korea, Democratic People`s Republic of : KP
+Korea, Republic of : KR
+Kosovo, Republic of : XK
+Kuwait : KW
+Kyrgyzstan : KG
+Lao People`s Democratic Republic : LA
+Latvia : LV
+Lebanon : LB
+Lesotho : LS
+Liberia : LR
+Libya : LY
+Liechtenstein : LI
+Lithuania : LT
+Luxembourg : LU
+North Macedonia, Republic of : MK
+Madagascar : MG
+Malawi : MW
+Malaysia : MY
+Maldives : MV
+Mali : ML
+Malta : MT
+Marshall islands : MH
+Martinique : MQ
+Mauritania : MR
+Mauritius : MU
+Mayotte : YT
+Mexico : MX
+Micronesia, Federated States of : FM
+Moldova, Republic of : MD
+Monaco : MC
+Mongolia : MN
+Montenegro : ME
+Montserrat : MS
+Morocco : MA
+Mozambique : MZ
+Myanmar : MM
+Namibia : NA
+Nauru : NR
+Nepal : NP
+Netherlands : NL
+Netherlands Antilles : AN
+New Zealand : NZ
+Nicaragua : NI
+Niger : NE
+Nigeria : NG
+Niue : NU
+Norfolk Island : NF
+Northern Mariana Islands : MP
+Norway : NO
+Oman : OM
+Pakistan : PK
+Palau : PW
+Panama : PA
+Papua New Guinea : PG
+Paraguay : PY
+Peru : PE
+Philippines : PH
+Pitcairn : PN
+Poland : PL
+Portugal : PT
+Puerto Rico : PR
+Qatar : QA
+Reunion : RE
+Romania : RO
+Russian Federation : RU
+Rwanda : RW
+Saint Helena : SH
+Saint Pierre and Miquelon : PM
+Samoa : WS
+San Marino : SM
+Sao Tome and Principe : ST
+Saudi Arabia : SA
+Senegal : SN
+Serbia : RS
+Seychelles : SC
+Sierra Leone : SL
+Singapore : SG
+Sint Maarten (Dutch part) : SX
+Slovakia : SK
+Slovenia : SI
+Solomon Islands : SB
+Somalia : SO
+South Africa : ZA
+South Georgia and the South Sandwich Islands : GS
+South Sudan : SS
+Spain : ES
+Sri Lanka : LK
+Saint Kitts and Nevis : KN
+Saint Lucia : LC
+Saint Vincent and the Grenadines : VC
+Sudan : SD
+Suriname : SR
+Eswatini : SZ
+Sweden : SE
+Switzerland : CH
+Syrian Arab Republic : SY
+Taiwan, Province of China : TW
+Tajikistan : TJ
+Tanzania, United Republic of : TZ
+Thailand : TH
+Timor-Leste : TL
+Togo : TG
+Tokelau : TK
+Tonga : TO
+Trinidad and Tobago : TT
+Tunisia : TN
+Turkey : TR
+Turkmenistan : TM
+Turks and Caicos Islands : TC
+Tuvalu : TV
+Uganda : UG
+Ukraine : UA
+United Arab Emirates : AE
+United Kingdom : GB
+United States : US
+Uruguay : UY
+United States Miscellaneous Pacific Islands : PU
+Virgin Islands, U.S. : VI
+Uzbekistan : UZ
+Vanuatu : VU
+Holy See (Vatican City State) : VA
+Venezuela, Bolivarian Republic : VE
+Viet Nam : VN
+Virgin Islands, British : VG
+Wallis and Futuna : WF
+Palestine, State of : PS
+Western Sahara : EH
+Yemen : YE
+Zambia : ZM
+Zimbabwe : ZW
+Countries_Reported : Countries_Reported
+Euro Area (Member States and Institutions of the Euro Area) changing composition : U2
+All Countries : All Countries
+All Reporting Countries : All Reporting Countries
+
+Indicators: 
+
+Consumer Price Index, All items : PCPI_IX
+Food and non-alcoholic beverages : PCPIF_IX
+Alcoholic Beverages, Tobacco, and Narcotics : PCPIFBT_IX
+Clothing and footwear : PCPIA_IX
+Housing, Water, Electricity, Gas and Other Fuels : PCPIH_IX
+Furnishings, household equipment and routine household maintenance : PCPIHO_IX
+Health : PCPIM_IX
+Transport : PCPIT_IX
+Communication : PCPIEC_IX
+Recreation and culture : PCPIR_IX
+Education : PCPIED_IX
+Restaurants and hotels : PCPIRE_IX
+Miscellaneous goods and services : PCPIO_IX
+Consumer Price Index, All items, Overlap : PCPI_OLP_IX
+Food and non-alcoholic beverages, Overlap : PCPIF_OLP_IX
+Alcoholic Beverages, Tobacco, and Narcotics, Overlap : PCPIFBT_OLP_IX
+Clothing and footwear, Overlap : PCPIA_OLP_IX
+Housing, Water, Electricity, Gas and Other Fuels, Overlap : PCPIH_OLP_IX
+Furnishings, household equipment and routine household maintenance, Overlap : PCPIHO_OLP_IX
+Health, Overlap : PCPIM_OLP_IX
+Transport, Overlap : PCPIT_OLP_IX
+Communication, Overlap : PCPIEC_OLP_IX
+Recreation and culture, Overlap : PCPIR_OLP_IX
+Education, Overlap : PCPIED_OLP_IX
+Restaurants and hotels, Overlap : PCPIRE_OLP_IX
+Miscellaneous goods and services, Overlap : PCPIO_OLP_IX
+Food and non-alcoholic beverages, Weight : PCPIF_WT
+Alcoholic Beverages, Tobacco, and Narcotics, Weight : PCPIFBT_WT
+Clothing and footwear, Weight : PCPIA_WT
+Housing, Water, Electricity, Gas and Other Fuels, Weight : PCPIH_WT
+Furnishings, household equipment and routine household maintenance, Weight : PCPIHO_WT
+Health, Weight : PCPIM_WT
+Transport, Weight : PCPIT_WT
+Communication, Weight : PCPIEC_WT
+Recreation and culture, Weight : PCPIR_WT
+Education, Weight : PCPIED_WT
+Restaurants and hotels, Weight : PCPIRE_WT
+Miscellaneous goods and services, Weight : PCPIO_WT
+Consumer Price Index, All items, Harmonized : PCPIHA_IX
+Food and non-alcoholic beverages, Harmonized : PCPIHAF_IX
+Alcoholic Beverages, Tobacco, and Narcotics, Harmonized : PCPIHABT_IX
+Clothing and footwear, Harmonized : PCPIHAA_IX
+Housing, Water, Electricity, Gas and Other Fuels, Harmonized : PCPIHAH_IX
+Furnishings, household equipment and routine household maintenance, Harmonized : PCPIHAHO_IX
+Health, Harmonized : PCPIHAM_IX
+Transport, Harmonized : PCPIHAT_IX
+Communication, Harmonized : PCPIHAC_IX
+Recreation and culture, Harmonized : PCPIHARC_IX
+Education, Harmonized : PCPIHAED_IX
+Restaurants and hotels, Harmonized : PCPIHARE_IX
+Miscellaneous goods and services, Harmonized : PCPIHAO_IX
+Consumer Price Index, All items, Harmonized, Overlap : PCPIHA_OLP_IX
+Food and non-alcoholic beverages, Harmonized, Overlap : PCPIHAF_OLP_IX
+Alcoholic Beverages, Tobacco, and Narcotics, Harmonized, Overlap : PCPIHABT_OLP_IX
+Clothing and footwear, Harmonized, Overlap : PCPIHAA_OLP_IX
+Housing, Water, Electricity, Gas and Other Fuels, Harmonized, Overlap : PCPIHAH_OLP_IX
+Furnishings, household equipment and routine household maintenance, Harmonized, Overlap : PCPIHAHO_OLP_IX
+Health, Harmonized, Overlap : PCPIHAM_OLP_IX
+Transport, Harmonized, Overlap : PCPIHAT_OLP_IX
+Communication, Harmonized, Overlap : PCPIHAC_OLP_IX
+Recreation and culture, Harmonized, Overlap : PCPIHARC_OLP_IX
+Education, Harmonized, Overlap : PCPIHAED_OLP_IX
+Restaurants and hotels, Harmonized, Overlap : PCPIHARE_OLP_IX
+Miscellaneous goods and services, Harmonized, Overlap : PCPIHAO_OLP_IX
+Food and non-alcoholic beverages, Harmonized, Weight : PCPIHAF_WT
+Alcoholic Beverages, Tobacco, and Narcotics, Harmonized, Weight : PCPIHABT_WT
+Clothing and footwear, Harmonized, Weight : PCPIHAA_WT
+Housing, Water, Electricity, Gas and Other Fuels, Harmonized, Weight : PCPIHAH_WT
+Furnishings, household equipment and routine household maintenance, Harmonized, Weight : PCPIHAHO_WT
+Health, Harmonized, Weight : PCPIHAM_WT
+Transport, Harmonized, Weight : PCPIHAT_WT
+Communication, Harmonized, Weight : PCPIHAC_WT
+Recreation and culture, Harmonized, Weight : PCPIHARC_WT
+Education, Harmonized, Weight : PCPIHAED_WT
+Restaurants and hotels, Harmonized, Weight : PCPIHARE_WT
+Miscellaneous goods and services, Harmonized, Weight : PCPIHAO_WT
+Consumer Price Index, All items, Standard Reference Period : PCPI_SRP_IX
+Food and non-alcoholic beverages, Standard Reference Period : PCPIF_SRP_IX
+Alcoholic Beverages, Tobacco, and Narcotics, Standard Reference Period : PCPIFBT_SRP_IX
+Clothing and footwear, Standard Reference Period : PCPIA_SRP_IX
+Housing, Water, Electricity, Gas and Other Fuels, Standard Reference Period : PCPIH_SRP_IX
+Furnishings, household equipment and routine household maintenance, Standard Reference Period : PCPIHO_SRP_IX
+Health, Standard Reference Period : PCPIM_SRP_IX
+Transport, Standard Reference Period : PCPIT_SRP_IX
+Communication, Standard Reference Period : PCPIEC_SRP_IX
+Recreation and culture, Standard Reference Period : PCPIR_SRP_IX
+Education, Standard Reference Period : PCPIED_SRP_IX
+Restaurants and hotels, Standard Reference Period : PCPIRE_SRP_IX
+Miscellaneous goods and services, Standard Reference Period : PCPIO_SRP_IX
+Consumer Price Index, All items, Percentage change, Previous period : PCPI_PC_PP_PT
+Food and non-alcoholic beverages, Percentage change, Previous period : PCPIF_PC_PP_PT
+Alcoholic Beverages, Tobacco, and Narcotics, Percentage change, Previous period : PCPIFBT_PC_PP_PT
+Clothing and footwear, Percentage change, Previous period : PCPIA_PC_PP_PT
+Housing, Water, Electricity, Gas and Other Fuels, Percentage change, Previous period : PCPIH_PC_PP_PT
+Furnishings, household equipment and routine household maintenance, Percentage change, Previous period : PCPIHO_PC_PP_PT
+Health, Percentage change, Previous period : PCPIM_PC_PP_PT
+Transport, Percentage change, Previous period : PCPIT_PC_PP_PT
+Communication, Percentage change, Previous period : PCPIEC_PC_PP_PT
+Recreation and culture, Percentage change, Previous period : PCPIR_PC_PP_PT
+Education, Percentage change, Previous period : PCPIED_PC_PP_PT
+Restaurants and hotels, Percentage change, Previous period : PCPIRE_PC_PP_PT
+Miscellaneous goods and services, Percentage change, Previous period : PCPIO_PC_PP_PT
+Consumer Price Index, All items, Percentage change, Previous year : PCPI_PC_CP_A_PT
+Food and non-alcoholic beverages, Percentage change, Previous year : PCPIF_PC_CP_A_PT
+Alcoholic Beverages, Tobacco, and Narcotics, Percentage change, Previous year : PCPIFBT_PC_CP_A_PT
+Clothing and footwear, Percentage change, Previous year : PCPIA_PC_CP_A_PT
+Housing, Water, Electricity, Gas and Other Fuels, Percentage change, Previous year : PCPIH_PC_CP_A_PT
+Furnishings, household equipment and routine household maintenance, Percentage change, Previous year : PCPIHO_PC_CP_A_PT
+Health, Percentage change, Previous year : PCPIM_PC_CP_A_PT
+Transport, Percentage change, Previous year : PCPIT_PC_CP_A_PT
+Communication, Percentage change, Previous year : PCPIEC_PC_CP_A_PT
+Recreation and culture, Percentage change, Previous year : PCPIR_PC_CP_A_PT
+Education, Percentage change, Previous year : PCPIED_PC_CP_A_PT
+Restaurants and hotels, Percentage change, Previous year : PCPIRE_PC_CP_A_PT
+Miscellaneous goods and services, Percentage change, Previous year : PCPIO_PC_CP_A_PT
+Consumer Price Index, All items, Harmonized, Standard Reference Period : PCPIHA_SRP_IX
+Food and non-alcoholic beverages, Harmonized, Standard Reference Period : PCPIHAF_SRP_IX
+Alcoholic Beverages, Tobacco, and Narcotics, Harmonized, Standard Reference Period : PCPIHABT_SRP_IX
+Clothing and footwear, Harmonized, Standard Reference Period : PCPIHAA_SRP_IX
+Housing, Water, Electricity, Gas and Other Fuels, Harmonized, Standard Reference Period : PCPIHAH_SRP_IX
+Furnishings, household equipment and routine household maintenance, Harmonized, Standard Reference Period : PCPIHAHO_SRP_IX
+Health, Harmonized, Standard Reference Period : PCPIHAM_SRP_IX
+Transport, Harmonized, Standard Reference Period : PCPIHAT_SRP_IX
+Communication, Harmonized, Standard Reference Period : PCPIHAC_SRP_IX
+Recreation and culture, Harmonized, Standard Reference Period : PCPIHARC_SRP_IX
+Education, Harmonized, Standard Reference Period : PCPIHAED_SRP_IX
+Restaurants and hotels, Harmonized, Standard Reference Period : PCPIHARE_SRP_IX
+Miscellaneous goods and services, Harmonized, Standard Reference Period : PCPIHAO_SRP_IX
+Consumer Price Index, All items, Harmonized, Percentage change, Previous period : PCPIHA_PC_PP_PT
+Food and non-alcoholic beverages, Harmonized, Percentage change, Previous period : PCPIHAF_PC_PP_PT
+Alcoholic Beverages, Tobacco, and Narcotics, Harmonized, Percentage change, Previous period : PCPIHABT_PC_PP_PT
+Clothing and footwear, Harmonized, Percentage change, Previous period : PCPIHAA_PC_PP_PT
+Housing, Water, Electricity, Gas and Other Fuels, Harmonized, Percentage change, Previous period : PCPIHAH_PC_PP_PT
+Furnishings, household equipment and routine household maintenance, Harmonized, Percentage change, Previous period : PCPIHAHO_PC_PP_PT
+Health, Harmonized, Percentage change, Previous period : PCPIHAM_PC_PP_PT
+Transport, Harmonized, Percentage change, Previous period : PCPIHAT_PC_PP_PT
+Communication, Harmonized, Percentage change, Previous period : PCPIHAC_PC_PP_PT
+Recreation and culture, Harmonized, Percentage change, Previous period : PCPIHARC_PC_PP_PT
+Education, Harmonized, Percentage change, Previous period : PCPIHAED_PC_PP_PT
+Restaurants and hotels, Harmonized, Percentage change, Previous period : PCPIHARE_PC_PP_PT
+Miscellaneous goods and services, Harmonized, Percentage change, Previous period : PCPIHAO_PC_PP_PT
+Consumer Price Index, All items, Harmonized, Percentage change, Previous year : PCPIHA_PC_CP_A_PT
+Food and non-alcoholic beverages, Harmonized, Percentage change, Previous year : PCPIHAF_PC_CP_A_PT
+Alcoholic Beverages, Tobacco, and Narcotics, Harmonized, Percentage change, Previous year : PCPIHABT_PC_CP_A_PT
+Clothing and footwear, Harmonized, Percentage change, Previous year : PCPIHAA_PC_CP_A_PT
+Housing, Water, Electricity, Gas and Other Fuels, Harmonized, Percentage change, Previous year : PCPIHAH_PC_CP_A_PT
+Furnishings, household equipment and routine household maintenance, Harmonized, Percentage change, Previous year : PCPIHAHO_PC_CP_A_PT
+Health, Harmonized, Percentage change, Previous year : PCPIHAM_PC_CP_A_PT
+Transport, Harmonized, Percentage change, Previous year : PCPIHAT_PC_CP_A_PT
+Communication, Harmonized, Percentage change, Previous year : PCPIHAC_PC_CP_A_PT
+Recreation and culture, Harmonized, Percentage change, Previous year : PCPIHARC_PC_CP_A_PT
+Education, Harmonized, Percentage change, Previous year : PCPIHAED_PC_CP_A_PT
+Restaurants and hotels, Harmonized, Percentage change, Previous year : PCPIHARE_PC_CP_A_PT
+Miscellaneous goods and services, Harmonized, Percentage change, Previous year : PCPIHAO_PC_CP_A_PT
+Food and non-alcoholic beverages, Weight, Percent : PCPIF_WT_PT
+Alcoholic Beverages, Tobacco, and Narcotics, Weight, Percent : PCPIFBT_WT_PT
+Clothing and footwear, Weight, Percent : PCPIA_WT_PT
+Housing, Water, Electricity, Gas and Other Fuels, Weight, Percent : PCPIH_WT_PT
+Furnishings, household equipment and routine household maintenance, Weight, Percent : PCPIHO_WT_PT
+Health, Weight, Percent : PCPIM_WT_PT
+Transport, Weight, Percent : PCPIT_WT_PT
+Communication, Weight, Percent : PCPIEC_WT_PT
+Recreation and culture, Weight, Percent : PCPIR_WT_PT
+Education, Weight, Percent : PCPIED_WT_PT
+Restaurants and hotels, Weight, Percent : PCPIRE_WT_PT
+Miscellaneous goods and services, Weight, Percent : PCPIO_WT_PT
+Clothing and footwear, Harmonized, Weight, Percent : PCPIHAA_WT_PT
+Alcoholic Beverages, Tobacco, and Narcotics, Harmonized, Weight, Percent : PCPIHABT_WT_PT
+Communication, Harmonized, Weight, Percent : PCPIHAC_WT_PT
+Education, Harmonized, Weight, Percent : PCPIHAED_WT_PT
+Food and non-alcoholic beverages, Harmonized, Weight, Percent : PCPIHAF_WT_PT
+Furnishings, household equipment and routine household maintenance, Harmonized, Weight, Percent : PCPIHAHO_WT_PT
+Housing, Water, Electricity, Gas and Other Fuels, Harmonized, Weight, Percent : PCPIHAH_WT_PT
+Health, Harmonized, Weight, Percent : PCPIHAM_WT_PT
+Miscellaneous goods and services, Harmonized, Weight, Percent : PCPIHAO_WT_PT
+Recreation and culture, Harmonized, Weight, Percent : PCPIHARC_WT_PT
+Restaurants and hotels, Harmonized, Weight, Percent : PCPIHARE_WT_PT
+Transport, Harmonized, Weight, Percent : PCPIHAT_WT_PT

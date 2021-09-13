@@ -1,0 +1,29 @@
+the data is too much for insertion into the node server.
+i need to get the data in steps of a year each the insert into the server
+
+i have retrieved and saved the data successfully in the mongo db server.
+
+now i want to update the data
+i will first get the most recent update
+use that date to get historical data from the received date to today
+
+29 March 2021 : 23:04
+- Implement the buttons for updating data from macro trends and plotting of graphs
+- With the plotting of graphs, the user will be asked:
+    - Overview options,
+    - Column options (they can only plot one at a time from the columns),
+    - Select the stock name for the desired plotting
+    - period will not be asked because the data starts from a recent date
+
+- I will create a new model for the different types of tables and just store the column headers as array lists
+
+30 March 2021 11:25
+- I have catered for the retrieval of data from the database server
+- Now I will get that data and display the required columns as buttons for selection
+
+- functions to implement
+    plot data
+    go back - Done
+    populateCombobox - Done
+    delete from listbox  - Done
+    stock selected  - Done

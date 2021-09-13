@@ -1,0 +1,19 @@
+28 October 2020
+    - the three ctypes for the xlrd.Cell:
+        - 0 => empty cell type
+        - 1 => text type
+        - 2 => Number type
+        - 3 => Date type
+        - 4 => boolean type
+        - 5 => error type
+        - 6 => blanck type
+
+
+29 October 2020
+    Algorithm to read data from the tables
+    -   get the #Date/Symbol# to find the starting point for the table
+    -   retrieve the other fields to the right of the Date/Symbol field, this retrieves the headings for the 
+        columns, store their cell locations as well for easy access to that column
+    -   display the columns for the user to choose which columns they wish to display
+    -   read data based on the columns checked in the checkBoxes
+    -   draw graph based on the data selected

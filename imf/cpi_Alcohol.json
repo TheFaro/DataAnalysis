@@ -1,0 +1,31 @@
+{
+    "CompactData": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+        "@xsi:schemaLocation": "http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message https://registry.sdmx.org/schemas/v2_0/SDMXMessage.xsd http://dataservices.imf.org/compact/IFS http://dataservices.imf.org/compact/IFS.xsd",
+        "@xmlns": "http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message",
+        "Header": {
+            "ID": "f3b6722d-f088-48f9-a04e-b4d4af77c8b0",
+            "Test": "false",
+            "Prepared": "2021-01-25T22:42:05",
+            "Sender": {
+                "@id": "1C0",
+                "Name": {
+                    "@xml:lang": "en",
+                    "#text": "IMF"
+                },
+                "Contact": {
+                    "URI": "http://www.imf.org",
+                    "Telephone": "+ 1 (202) 623-6220"
+                }
+            },
+            "Receiver": {
+                "@id": "ZZZ"
+            },
+            "DataSetID": "IFS"
+        },
+        "DataSet": {
+            "@xmlns": "http://dataservices.imf.org/compact/IFS"
+        }
+    }
+}

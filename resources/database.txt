@@ -1,0 +1,21 @@
+Database definition for the Data Analyzer tool
+
+MACROTRENDS DEFINITIONS
+
+RELATIONS:
+OVERVIEW(id, stock_name, ticker, industry,market_cap)
+OVERVIEW_DYNAMIC(id, overview_id, closing_price,one_yr_perc_change, p_e_ratio, dividend_yield,created_at, updated_at)
+
+DESCRIPTIVE(id, overview_id, exchange, country, sector,industry)
+
+DIVIDENDS(id, overview_id, dividend_yield, twelve_month_dividend, twelve_month_eps, dividend_payout_ratio)
+
+PERFORMANCE_ST(id, overview_id, weekly_change, monthly_change, quaterly_change, six_month_change, ytd_change, yearly_change, price_vs_50d_sma, price_vs_200d_sma)
+
+PERFORMANCE_LT(id, overview_id, three_year_cagr, five_year_cagr, ten_year_cagr, twenty_year_cagr, thirty_year_cagr)
+
+INCOME_RATIOS(id, overview_id, price_earning_ratio, peg_ratio,price_sales_ratio, operating_margin, pre_tax_margin, net_margin)
+
+DEBT_RATIOS(id, overview_id, price_book_ratio, price_cash_ratio, return_on_equity, return_on_assets, inventory_turnover, current_ratio, quick_ratio, debt_equity_ratio)
+
+REVENUE_EARNIGS(id, overview_id, twelve_month_sales_growth, five_year_sales_growth, twelve_month_eps_growth, five_year_eps_growth, last_quarter_eps_suprise, estimated_eps_next_year)

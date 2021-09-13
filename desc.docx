@@ -1,0 +1,23 @@
+﻿Data mining tool Description
+
+There are 2 Objectives : 
+
+    1. Create dynamic charts to display data of interest
+        - instead of going back and forth selecting data to display on chart
+        - drop down option is highly prefered
+    
+    2. Automate the chart update
+
+How will I solve the objectives: 
+
+    The solution will be written in python and read data from xls files and thus display the read data in charts that will be provided via a drop-down menu
+        - I will design a UI for the tool that will have 3 buttons : View Charts, Update Data, and Exit
+        - I will implement the UI using python Tkinter module
+        - Under the the first button (View Charts):
+            -- upon clicking, the View charts button there will be 3 input fields
+            -- the first field will allow the user to choose the type of data(columns) to be displayed. I am thinking to use checkboxes for the selection
+            -- the second field will allow the use to choose how to view this data, the type of chart to use. This is where the drop down menu approach will be employed
+            -- the third field will be the submit field that takes the user to the charts screen
+        - Under the second button(Update data):
+            -- here is where web-crawler functionality will be implemented to sift through data on the net
+        - Under the third button, the program will exit

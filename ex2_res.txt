@@ -1,0 +1,14 @@
+              label                                                                                                   text
+0             Today                                           Partly sunny, with a high near 59. Light and variable wind. 
+1           Tonight  Mostly cloudy, with a low around 47. West northwest wind around 5 mph becoming calm  after midnight. 
+2            Monday     Patchy fog before 8am.  Otherwise, partly sunny, with a high near 59. Light north northwest wind. 
+3      Monday Night                                                       Mostly cloudy, with a low around 47. Calm wind. 
+4           Tuesday           Mostly cloudy, with a high near 61. Calm wind becoming north around 5 mph in the afternoon. 
+5     Tuesday Night                                                                   Mostly cloudy, with a low around 49.
+6         Wednesday                                                                     Partly sunny, with a high near 63.
+7   Wednesday Night                                                                   Mostly cloudy, with a low around 50.
+8          Thursday                                                                     Mostly sunny, with a high near 65.
+9    Thursday Night                                                                   Partly cloudy, with a low around 48.
+10           Friday                                                                     Partly sunny, with a high near 64.
+11     Friday Night                                                                   Partly cloudy, with a low around 49.
+12         Saturday                                                                     Mostly sunny, with a high near 64.
