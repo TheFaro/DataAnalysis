@@ -1,8 +1,10 @@
 from tkinter import *
 import tkinter.messagebox as mb
 
+
 def comingSoon():
     mb.showinfo('Message', 'Implementation coming soon')
+
 
 def makemenu(win):
     top = Menu(win)
@@ -18,4 +20,4 @@ def makemenu(win):
     edit = Menu(top, tearoff=False)
     edit.add_command(label='Cut', command=comingSoon, underline=0)
     edit.add_command(label='Paste', command=comingSoon, underline=0)
-    top.add_cascade(label='Edit',menu=edit, underline=0)
+    top.add_cascade(label='Edit', menu=edit, underline=0)

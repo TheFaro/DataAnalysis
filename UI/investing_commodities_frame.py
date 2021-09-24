@@ -6,9 +6,9 @@ import datetime
 import json
 import requests
 
-from investing_commodities_api import *
-from scrollable_frame import *
+import investing_commodities_api
 import constants as const
+
 
 class PlotCommoditiesFrame(tk.Frame):
     def __init__(self, master):
@@ -16,16 +16,18 @@ class PlotCommoditiesFrame(tk.Frame):
 
         self.group_var = tk.StringVar()
         self.commodity_var = tk.StringVar()
-        self.api = CommoditiesAPI()
+        self.api = investing_commodities_api.CommoditiesAPI()
+        self.const = const.Constants()
 
         row = tk.Frame(self)
-        lab = tk.Label(row, text='Commodities Plotting', font=const.title_font)
+        lab = tk.Label(row, text='Commodities Plotting',
+                       font=self.const.title_font)
         row.pack()
         lab.pack()
 
-        #combobox for selecting group
+        # combobox for selecting group
         row = tk.Frame(self)
-        lab = tk.Label(row, text='Select Group', font=const.font)
+        lab = tk.Label(row, text='Select Group', font=self.const.font)
         self.groups = ttk.Combobox(row, width=27, textvariable=self.group_var)
         self.populateGroupsCombobox(master)
         row.pack(pady=15)
@@ -34,101 +36,110 @@ class PlotCommoditiesFrame(tk.Frame):
         self.groups.current(0)
         self.groups.bind("<<ComboboxSelected>>", self.groupSelected)
 
-        #combobox for selecting commodity
+        # combobox for selecting commodity
         row = tk.Frame(self)
-        lab = tk.Label(row, text='Select Commodity', font=const.font)
-        self.commodities = ttk.Combobox(row, width=27, textvariable=self.commodity_var)
+        lab = tk.Label(row, text='Select Commodity', font=self.const.font)
+        self.commodities = ttk.Combobox(
+            row, width=27, textvariable=self.commodity_var)
         row.pack(pady=15)
         lab.pack(side='left')
         self.commodities.pack(side='right')
         self.commodities.bind("<<ComboboxSelected>>", self.commoditySelected)
 
-        #start date definition
+        # start date definition
         big_row = tk.Frame(self)
         row = tk.Frame(big_row)
-        lab = tk.Label(row, text='Start Date', width=30, font=const.font, relief='ridge')
-        self.start_date = tk.Entry(row, width=25, font=const.font,relief='sunken')
+        lab = tk.Label(row, text='Start Date', width=30,
+                       font=self.const.font, relief='ridge')
+        self.start_date = tk.Entry(
+            row, width=25, font=self.const.font, relief='sunken')
         row.pack()
         lab.pack(side='left')
         self.start_date.pack(side='right')
 
         row = tk.Frame(big_row)
-        hint = tk.Label(row, text='date format(dd/mm/yyyy)', font=const.hint_font)
+        hint = tk.Label(row, text='date format(dd/mm/yyyy)',
+                        font=self.const.hint_font)
         row.pack()
         hint.pack()
         big_row.pack(pady=15, padx=10)
 
-        #end date definition
+        # end date definition
         row = tk.Frame(big_row)
-        lab = tk.Label(row, text='End Date', width=30, font=const.font, relief='ridge')
-        self.end_date = tk.Entry(row, width=25, font=const.font, relief='sunken')
+        lab = tk.Label(row, text='End Date', width=30,
+                       font=self.const.font, relief='ridge')
+        self.end_date = tk.Entry(
+            row, width=25, font=self.const.font, relief='sunken')
         row.pack()
         lab.pack(side='left')
         self.end_date.pack(side='right')
 
         row = tk.Frame(big_row)
-        hint = tk.Label(row, text='date format(dd/mm/yyyy)',font=const.hint_font)
+        hint = tk.Label(row, text='date format(dd/mm/yyyy)',
+                        font=self.const.hint_font)
         row.pack()
         hint.pack()
         big_row.pack(pady=15, padx=10)
 
-        #plot button definition
+        # plot button definition
         row = tk.Frame(self)
-        but = tk.Button(row, text='Plot Data', font=const.font, width=20, command=lambda:self.plotData(master))
+        but = tk.Button(row, text='Plot Data', font=self.const.font,
+                        width=20, command=lambda: self.plotData(master))
         row.pack(pady=15)
         but.pack()
 
-        #update all definition
+        # update all definition
         row = tk.Frame(self)
-        but = tk.Button(row, text='Update All', font=const.font,width=20)
+        but = tk.Button(row, text='Update All', font=self.const.font, width=20)
         row.pack(pady=15)
         but.pack()
 
-        #back button definition
+        # back button definition
         row = tk.Frame(self)
-        but = tk.Button(row, text='Back', width=20, command=lambda: self.goBack(master))
+        but = tk.Button(row, text='Back', width=20,
+                        command=lambda: self.goBack(master))
         row.pack(pady=15)
         but.pack()
 
-    #handle back button click
+    # handle back button click
     def goBack(self, master):
-        from investing_select_data import SelectData
-        master.switch_frame(SelectData)
+        import investing_select_data
+        master.switch_frame(investing_select_data.SelectData)
 
-    #function to populate the groups combobox
+    # function to populate the groups combobox
     def populateGroupsCombobox(self, master):
         groups = self.api.getGroups()
         temp = []
 
-        #append each item to groups combobox
-        for i,group in enumerate(groups):
+        # append each item to groups combobox
+        for i, group in enumerate(groups):
             temp.append(group)
-        
+
         self.groups['values'] = temp
 
-    #handle group selection
+    # handle group selection
     def groupSelected(self, event):
         selected = event.widget.get()
         self.api.setGroup(selected)
 
-        #retrieve commodities based on selected group
+        # retrieve commodities based on selected group
         commodities = self.api.getCommoditiesDict(group=selected)
         temp = []
 
-        #append each item to the commodities combobox
-        for i,commodity in enumerate(commodities):
+        # append each item to the commodities combobox
+        for i, commodity in enumerate(commodities):
             temp.append(commodity['name'])
 
         self.commodities['values'] = temp
 
-    #handle the selection of a commodity
+    # handle the selection of a commodity
     def commoditySelected(self, event):
         selected = event.widget.get()
         self.api.setCommodity(selected)
 
-    #handle plotting of graphs using specified data 
+    # handle plotting of graphs using specified data
     def plotData(self, master):
-        #check for inputs
+        # check for inputs
         if self.api.getGroup() == None or self.api.getGroup() == "":
             mb.showinfo('Notice', 'Select a group')
             return
@@ -143,40 +154,43 @@ class PlotCommoditiesFrame(tk.Frame):
             return
         '''
 
-        #check for date in mongo db server
-        result = requests.get(f"{const.server}/investing/commodities/get/{self.api.getName()}_{self.api.getCountry()}/{self.start_date.get().replace('/','')}/{self.end_date.get().replace('/','')}", headers=const.headers).json()
-        
+        # check for date in mongo db server
+        result = requests.get(
+            f"{self.const.server}/investing/commodities/get/{self.api.getName()}_{self.api.getCountry()}/{self.start_date.get().replace('/','')}/{self.end_date.get().replace('/','')}", headers=self.const.headers).json()
+
         if result['success'] == 1:
             df = pd.DateFrame(result['data'][0]['data'])
             print('DataFrame: \n', df)
 
-            #drop unwanted columns // __id, volume, currency
-            df.drop(df.columns[[0,6,7]], axis=1, inplace=True)
+            # drop unwanted columns // __id, volume, currency
+            df.drop(df.columns[[0, 6, 7]], axis=1, inplace=True)
 
-            #draw candles
-            const.drawCandles(df, self.api.getName(), self.api.getCountry())
-        else: 
+            # draw candles
+            self.const.drawCandles(
+                df, self.api.getName(), self.api.getCountry())
+        else:
             self.updateData()
             self.plotData(master)
 
-    #function to handle updating data in database server
+    # function to handle updating data in database server
     def updateData(self):
-        #check for bond 
+        # check for bond
         if self.api.getName() == None or self.api.getName() == "":
             mb.showinfo('Notice', 'Select a commodity')
             return
         elif self.api.getGroup() == None or self.api.getGroup() == "":
             mb.showinfo('Notice', 'Select a group')
 
-        #get most recent 
+        # get most recent
         data = {
-            'commodity_name' : f"{self.api.getName()}_{self.api.getCountry()}"
+            'commodity_name': f"{self.api.getName()}_{self.api.getCountry()}"
         }
 
-        recent = requests.get(f'{const.server}/investing/commodities/get/recent',data=json.dumps(data),headers=const.headers)
-        
-        if recent.status_code == 404: 
-            #get historical data
+        recent = requests.get(f'{self.const.server}/investing/commodities/get/recent',
+                              data=json.dumps(data), headers=self.const.headers)
+
+        if recent.status_code == 404:
+            # get historical data
             self.api.setFromDate('01/01/1980')
             now = datetime.datetime.now()
             self.api.setToDate(now.strftime('%d/%m/%Y'))
@@ -185,15 +199,17 @@ class PlotCommoditiesFrame(tk.Frame):
             j = json.loads(historical)
             dat = j['historical']
 
-            #send data to mongodb server
-            const.saveDataInServer(dat, 'investing/commodities', 'commodity_name', self.api)
+            # send data to mongodb server
+            self.const.saveDataInServer(
+                dat, 'investing/commodities', 'commodity_name', self.api)
 
-            mb.showinfo('Notice', f'Data on {self.api.getName()} updated successfully.')
+            mb.showinfo(
+                'Notice', f'Data on {self.api.getName()} updated successfully.')
 
         elif recent.status_code == 200:
-            #get recent data
+            # get recent data
             rec = recent.json()
-            print('\n',rec, '\n')
+            print('\n', rec, '\n')
 
             rec_list = rec['data'][0]['data']
             last_date = rec_list[-1:]
@@ -208,10 +224,12 @@ class PlotCommoditiesFrame(tk.Frame):
             j = json.loads(historical)
             dat = j['historical']
 
-            #save data to mondo db server
-            const.saveDataInServer(dat, 'investing/commodities', 'commodity_name', self.api)
+            # save data to mondo db server
+            self.const.saveDataInServer(
+                dat, 'investing/commodities', 'commodity_name', self.api)
 
-            mb.showinfo('Notice',f'Data on {self.api.getName()} updated successfully.')
+            mb.showinfo(
+                'Notice', f'Data on {self.api.getName()} updated successfully.')
 
         elif recent.status_code == 400 or recent.status_code == 500:
-            mb.showinfo('Notice', r['message'])
+            mb.showinfo('Notice', recent['message'])

@@ -1,16 +1,17 @@
 import tkinter as tk
 
-from choose_data_source_frame import ChooseDataSourceFrame
-from imf_series_dataflow_frame import SearchForSeriesDataflow
+import choose_data_source_frame
+import imf_series_dataflow_frame
+
 
 class IMFDataSetFrame(tk.Frame):
-    def __init__(self,master):
+    def __init__(self, master):
         tk.Frame.__init__(self, master)
 
         self.sets_list = []
         self.master = master
 
-        #add data sets to the list
+        # add data sets to the list
         '''self.sets_list.append({"code": "FSI","name": "Financial Soundness Indicators"})
         self.sets_list.append({"code": "FAS","name": "Financial Access Survey"})
         self.sets_list.append({"code": "IFS","name": "International Financial Statistics"})
@@ -37,27 +38,31 @@ class IMFDataSetFrame(tk.Frame):
         self.sets_list.append({"code": "MFS","name": "Monetary and Financial Statistics"})
         self.sets_list.append({"code": "SNA","name": "System of National Accounts"})'''
 
-        #create widgets
+        # create widgets
         self.search_text = tk.StringVar()
         self.search_text.set("IMF - DataSets")
-        title = tk.Label(self,textvariable=self.search_text,width="40").pack(side=tk.TOP)
+        title = tk.Label(self, textvariable=self.search_text,
+                         width="40").pack(side=tk.TOP)
 
-        #search bar
+        # search bar
         edit = tk.Entry(self)
         edit.pack(side=tk.TOP, fill=tk.BOTH, expand=1)
         edit.focus_set()
 
-        #add search button
-        search_button = tk.Button(self, text='Search',command=lambda:self.setSearchTerm(edit.get())).pack(side=tk.TOP,pady=15)
+        # add search button
+        search_button = tk.Button(self, text='Search', command=lambda: self.setSearchTerm(
+            edit.get())).pack(side=tk.TOP, pady=15)
 
-        #add get all button
-        get_all_button = tk.Button(self,text='Get All Data Sets',command=lambda:self.getAll()).pack(side=tk.TOP,pady=10)
+        # add get all button
+        get_all_button = tk.Button(self, text='Get All Data Sets',
+                                   command=lambda: self.getAll()).pack(side=tk.TOP, pady=10)
 
-        #define a back button
-        back_button = tk.Button(self,text="Back",command=lambda:self.master.switch_frame(ChooseDataSourceFrame))
-        back_button.pack(side=tk.BOTTOM,pady=15)
+        # define a back button
+        back_button = tk.Button(self, text="Back", command=lambda: self.master.switch_frame(
+            choose_data_source_frame.ChooseDataSourceFrame))
+        back_button.pack(side=tk.BOTTOM, pady=15)
 
-        #create a list box with current dataset list 
+        # create a list box with current dataset list
         '''scrollbar = tk.Scrollbar(self)
         list = tk.Listbox(self,relief=SUNKEN,width="60",height="20")
         scrollbar.config(command=list.yview)
@@ -72,20 +77,22 @@ class IMFDataSetFrame(tk.Frame):
         list.bind('<Double-1>', self.selectedDataset)
         self.list_box = list'''
 
-    #function that retrieves selected dataset code
-    def selectedDataset(self,event):
+    # function that retrieves selected dataset code
+    def selectedDataset(self, event):
         index = self.list_box.curselection()
         idx = index[0]
 
-        #set selected dataset code
+        # set selected dataset code
         self.master.setIMFDatasetCode(self.sets_list[idx]['code'])
-    
-    #function to set search term
+
+    # function to set search term
     def setSearchTerm(self, term):
         self.master.setIMFSearchString(term)
-        self.master.switch_frame(SearchForSeriesDataflow)
+        self.master.switch_frame(
+            imf_series_dataflow_frame.SearchForSeriesDataflow)
 
-    #function to get all datasets
+    # function to get all datasets
     def getAll(self):
         self.master.search_term = ""
-        self.master.switch_frame(SearchForSeriesDataflow)
+        self.master.switch_frame(
+            imf_series_dataflow_frame.SearchForSeriesDataflow)

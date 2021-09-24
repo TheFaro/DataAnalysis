@@ -6,25 +6,27 @@ import datetime
 import json
 import requests
 
-from investing_currency_cross_api import *
-from scrollable_frame import *
+import investing_currency_cross_api
 import constants as const
+
 
 class PlotCrossesFrame(tk.Frame):
     def __init__(self, master):
         tk.Frame.__init__(self, master)
 
         self.cross_var = tk.StringVar()
-        self.api = CrossesAPI()
+        self.api = investing_currency_cross_api.CrossesAPI()
+        self.const = const.Constants()
 
         row = tk.Frame(self)
-        lab = tk.Label(row, text='Currency Crosses Plotting', font=const.title_font)
+        lab = tk.Label(row, text='Currency Crosses Plotting',
+                       font=self.const.title_font)
         row.pack()
         lab.pack()
 
-        #combobox for selecting currency crosses
+        # combobox for selecting currency crosses
         row = tk.Frame(self)
-        lab = tk.Label(row, text='Select Currency Cross', font=const.font)
+        lab = tk.Label(row, text='Select Currency Cross', font=self.const.font)
         self.crosses = ttk.Combobox(row, width=27, textvariable=self.cross_var)
         self.populateCrossesCombobox(master)
         row.pack(pady=15)
@@ -33,77 +35,85 @@ class PlotCrossesFrame(tk.Frame):
         self.crosses.current(0)
         self.crosses.bind("<<ComboboxSelected>>", self.crossSelected)
 
-        #start date definition
+        # start date definition
         big_row = tk.Frame(self)
         row = tk.Frame(big_row)
-        lab = tk.Label(row, text='Start Date',width=30, font=const.font, relief='ridge')
-        self.start_date = tk.Entry(row, width=25, font=const.font, relief='sunken')
+        lab = tk.Label(row, text='Start Date', width=30,
+                       font=self.const.font, relief='ridge')
+        self.start_date = tk.Entry(
+            row, width=25, font=self.const.font, relief='sunken')
         row.pack()
         lab.pack(side='left')
         self.start_date.pack(side='right')
 
         row = tk.Frame(big_row)
-        hint = tk.Label(row, text='date format (dd/mm/yyyy)',font=const.hint_font)
+        hint = tk.Label(row, text='date format (dd/mm/yyyy)',
+                        font=self.const.hint_font)
         row.pack()
         hint.pack()
         big_row.pack(pady=15, padx=10)
 
-        #end date definition
+        # end date definition
         big_row = tk.Frame(self)
         row = tk.Frame(big_row)
-        lab = tk.Label(row, text='End Date', font=const.font, width=30, relief='ridge')
-        self.end_date = tk.Entry(row, width=25, font=const.font, relief='sunken')
+        lab = tk.Label(row, text='End Date', font=self.const.font,
+                       width=30, relief='ridge')
+        self.end_date = tk.Entry(
+            row, width=25, font=self.const.font, relief='sunken')
         row.pack()
         lab.pack(side='left')
         self.end_date.pack(side='right')
 
         row = tk.Frame(big_row)
-        hint = tk.Label(row, text='date format(dd/mm/yyyy)',font=const.hint_font)
+        hint = tk.Label(row, text='date format(dd/mm/yyyy)',
+                        font=self.const.hint_font)
         row.pack()
         hint.pack()
         big_row.pack(pady=15, padx=10)
 
-        #plot button definition
+        # plot button definition
         row = tk.Frame(self)
-        but = tk.Button(row, text="Plot Data", font=const.font, width=20, command=lambda: self.plotData(master))
+        but = tk.Button(row, text="Plot Data", font=self.const.font,
+                        width=20, command=lambda: self.plotData(master))
         row.pack(pady=15)
         but.pack()
 
-        #update all Button
+        # update all Button
         row = tk.Frame(self)
-        but = tk.Button(row, text='Update All', font=const.font, width=20)
+        but = tk.Button(row, text='Update All', font=self.const.font, width=20)
         row.pack(pady=15)
         but.pack()
 
-        #back button
+        # back button
         row = tk.Frame(self)
-        but = tk.Button(row, text='Back', width=20, command=lambda:self.goBack(master))
+        but = tk.Button(row, text='Back', width=20,
+                        command=lambda: self.goBack(master))
         row.pack(pady=15)
         but.pack()
 
-    #handle going back
+    # handle going back
     def goBack(self, master):
-        from investing_select_data import SelectData
-        master.switch_frame(SelectData)
-    
-    #function to populate crosses combobox
-    def populateCrossesCombobox(self,master):
+        import investing_select_data
+        master.switch_frame(investing_select_data.SelectData)
+
+    # function to populate crosses combobox
+    def populateCrossesCombobox(self, master):
         crosses = self.api.getCrossesDict()
         temp = []
 
-        #append to combobox array
-        for i,cross in enumerate(crosses):
+        # append to combobox array
+        for i, cross in enumerate(crosses):
             temp.append(f"{cross['base']}/{cross['second']}")
 
         self.crosses['values'] = temp
 
-    #handle selection of combobox item
+    # handle selection of combobox item
     def crossSelected(self, event):
         selected = event.widget.get()
         self.api.setCross(selected)
-    
-    #plots data
-    def plotData(self,master):
+
+    # plots data
+    def plotData(self, master):
         if self.api.getName() == None or self.api.getName() == '':
             mb.showinfo('Notice', 'Select an Currency Cross')
             return
@@ -115,8 +125,9 @@ class PlotCrossesFrame(tk.Frame):
             return
         '''
 
-        #check for data in mongo db server
-        result = requests.get(f"{const.server}/investing/currency_crosses/get/{self.api.getName()}_{self.api.getCountry()}/{self.start_date.get().replace('/','')}/{self.end_date.get().replace('/','')}",headers=const.headers).json()
+        # check for data in mongo db server
+        result = requests.get(
+            f"{self.const.server}/investing/currency_crosses/get/{self.api.getName()}_{self.api.getCountry()}/{self.start_date.get().replace('/','')}/{self.end_date.get().replace('/','')}", headers=self.const.headers).json()
 
         print('Result for getting:', result['data'][0]['data'])
 
@@ -124,32 +135,34 @@ class PlotCrossesFrame(tk.Frame):
             df = pd.DataFrame(result['data'][0]['data'])
             print('DataFrame: \n', df)
 
-            #drop unnecessary columns
-            #TODO: check the original json response
+            # drop unnecessary columns
+            # TODO: check the original json response
             df.drop(df.columns[[4]], axis=1, inplace=True)
 
-            #draw candles
-            const.drawCandles(df, self.api.getName(), self.api.getCountry())
-        else: 
+            # draw candles
+            self.const.drawCandles(
+                df, self.api.getName(), self.api.getCountry())
+        else:
             self.updateData()
             self.plotData(master)
-    
-    #function to update data in database server
+
+    # function to update data in database server
     def updateData(self):
-        #check for index name and country name
+        # check for index name and country name
         if self.api.getName() == None or self.api.getName() == "":
             mb.showinfo('Notice', "Select an Currency Cross")
             return
 
-        #get most recent record from server with this name
+        # get most recent record from server with this name
         data = {
             'currency_name': f"{self.api.getName()}_{self.api.getCountry()}",
         }
 
-        recent = requests.get(f"{const.server}/investing/currency_crosses/get/recent",data=json.dumps(data), headers=const.headers)
+        recent = requests.get(f"{self.const.server}/investing/currency_crosses/get/recent",
+                              data=json.dumps(data), headers=self.const.headers)
 
         if recent.status_code == 404:
-            #get historical data starting from 1980
+            # get historical data starting from 1980
             self.api.setFromDate('01/01/1980')
             now = datetime.datetime.now()
             self.api.toDate(now.strftime('%d/%m/%Y'))
@@ -158,15 +171,17 @@ class PlotCrossesFrame(tk.Frame):
             j = json.loads(historical)
             dat = j['historical']
 
-            #send data to mongodb server
-            const.saveDataInServer(dat, 'investing/currency_crosses', 'currency_name', self.api)
+            # send data to mongodb server
+            self.const.saveDataInServer(
+                dat, 'investing/currency_crosses', 'currency_name', self.api)
 
-            mb.showinfo('Notice',f'Data on {self.api.getName()} updated successfully.')
+            mb.showinfo(
+                'Notice', f'Data on {self.api.getName()} updated successfully.')
 
         elif recent.status_code == 200:
-            #get recent data
+            # get recent data
             rec = recent.json()
-            print('\n', rec,'\n')
+            print('\n', rec, '\n')
 
             rec_list = rec['data'][0]['data']
             last_date = rec_list[-1:]
@@ -180,10 +195,12 @@ class PlotCrossesFrame(tk.Frame):
             j = json.loads(historical)
             dat = j['historical']
 
-            #send data to mongo db server
-            const.saveDataInServer(dat, 'investing/currency_crosses', 'currency_name', self.api)
+            # send data to mongo db server
+            self.const.saveDataInServer(
+                dat, 'investing/currency_crosses', 'currency_name', self.api)
 
-            mb.showinfo('Notice', f'Data on {self.api.getName()} updated successfully.')
+            mb.showinfo(
+                'Notice', f'Data on {self.api.getName()} updated successfully.')
 
         elif recent.status_code == 400 or recent.status_code == 500:
             mb.showinfo('Notice', recent.json()['message'])

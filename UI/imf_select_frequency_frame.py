@@ -2,46 +2,50 @@ import tkinter as tk
 import requests
 import json
 
-from imf_series_dataflow_frame import SearchForSeriesDataflow
+import imf_series_dataflow_frame
 import constants as const
 
+
 class SelectFrequencyFrame(tk.Frame):
-    def __init__(self,master):
-        tk.Frame.__init__(self,master)
+    def __init__(self, master):
+        tk.Frame.__init__(self, master)
 
         self.chosen_frequency = tk.StringVar()
-        
-        #build widgets
+        self.const = const.Constants()
+
+        # build widgets
         #tk.Label(self,text='Choose Data Specifications',height="5",font=("Arial",18)).pack(side=tk.TOP,padx=7)
-        tk.Label(self,text='Select Frequency:',font=const.font,width=40).pack(side=tk.TOP)
+        tk.Label(self, text='Select Frequency:',
+                 font=self.const.font, width=40).pack(side=tk.TOP)
         self.getDimensions(master)
         self.buildRadioButton(master)
-        tk.Button(self,text='Back',command=lambda:master.switch_frame(SearchForSeriesDataflow)).pack(side=tk.BOTTOM,ipady=5,pady=5)
-        tk.Button(self,text='Next',command=lambda:self.goToSelectCountry(master)).pack(side=tk.BOTTOM,ipady=5,pady=5)
+        tk.Button(self, text='Back', command=lambda: master.switch_frame(
+            imf_series_dataflow_frame.SearchForSeriesDataflow)).pack(side=tk.BOTTOM, ipady=5, pady=5)
+        tk.Button(self, text='Next', command=lambda: self.goToSelectCountry(
+            master)).pack(side=tk.BOTTOM, ipady=5, pady=5)
 
-    #function to build frequency radio buttons
-    def buildRadioButton(self,master):
+    # function to build frequency radio buttons
+    def buildRadioButton(self, master):
 
-        for i,freq in enumerate(master.frequency_list):
+        for i, freq in enumerate(master.frequency_list):
             tk.Radiobutton(
                 self,
                 text=freq["text"],
                 variable=self.chosen_frequency,
-                value=freq["code"]).pack(side=tk.TOP,ipady=5)
-    
-    def goToSelectCountry(self,master):
-        from imf_select_countries_frame import SelectCountriesFrame
+                value=freq["code"]).pack(side=tk.TOP, ipady=5)
+
+    def goToSelectCountry(self, master):
+        import imf_select_countries_frame
         print(f"Chosen Freq: {self.chosen_frequency.get()}")
-        master.IMF_var.append({"frequency":f"{self.chosen_frequency.get()}"})
+        master.IMF_var.append({"frequency": f"{self.chosen_frequency.get()}"})
         print(master.IMF_var)
-    
-        #go to the next frame
+
+        # go to the next frame
         print("Go select Countries")
-        master.switch_frame(SelectCountriesFrame)
+        master.switch_frame(imf_select_countries_frame.SelectCountriesFrame)
 
-
-    #function to get the dimensions
-    def getDimensions(self,master):
+    # function to get the dimensions
+    def getDimensions(self, master):
         freq = None
         area = None
         indicator = None
@@ -50,45 +54,44 @@ class SelectFrequencyFrame(tk.Frame):
         master.indicator_list = []
 
         key = f'DataStructure/{master.dataset_code}'
-        dimension_list = requests.get(f'{master.url}{key}').json()\
-                        ['Structure']['KeyFamilies']['KeyFamily']\
-                        ['Components']['Dimension']
+        dimension_list = requests.get(f'{master.url}{key}').json(
+        )['Structure']['KeyFamilies']['KeyFamily']['Components']['Dimension']
 
         for n, dimension in enumerate(dimension_list):
             print(f'Dimension {n+1} {dimension["@codelist"]}')
-        
+
         freq = dimension_list[0]['@codelist']
         area = dimension_list[1]['@codelist']
         indicator = dimension_list[2]['@codelist']
 
-        #get the lists for each of the three paramaters
+        # get the lists for each of the three paramaters
         for i in range(3):
             if i == 0:
                 key2 = f"CodeList/{freq}"
-                code_list = requests.get(f'{master.url}{key2}').json()\
-                            ['Structure']['CodeLists']['CodeList']['Code']
+                code_list = requests.get(f'{master.url}{key2}').json()[
+                    'Structure']['CodeLists']['CodeList']['Code']
 
                 for code in code_list:
                     master.frequency_list.append({
-                        "text": f"{code['Description']['#text']}", 
+                        "text": f"{code['Description']['#text']}",
                         "code": f"{code['@value']}"
                     })
-            
+
             elif i == 1:
                 key2 = f"CodeList/{area}"
-                code_list = requests.get(f'{master.url}{key2}').json()\
-                            ['Structure']['CodeLists']['CodeList']['Code']
+                code_list = requests.get(f'{master.url}{key2}').json()[
+                    'Structure']['CodeLists']['CodeList']['Code']
 
                 for code in code_list:
                     master.country_list.append({
                         "text": f"{code['Description']['#text']}",
                         "code": f"{code['@value']}"
                     })
-            
+
             elif i == 2:
                 key2 = f"CodeList/{indicator}"
-                code_list = requests.get(f'{master.url}{key2}').json()\
-                            ['Structure']['CodeLists']['CodeList']['Code']
+                code_list = requests.get(f'{master.url}{key2}').json()[
+                    'Structure']['CodeLists']['CodeList']['Code']
 
                 for code in code_list:
                     master.indicator_list.append({
