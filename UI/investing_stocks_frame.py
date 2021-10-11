@@ -168,30 +168,32 @@ class PlotDataFrame(tk.Frame):
             return
 
         # check start date and end date
-        # if self.start_date.get() == None:
-        #    mb.showinfo('Notice', 'Enter start date')
-        #    return
-        # elif self.end_date.get() == None:
-        #    mb.showinfo('Notice', 'Enter end date')
-        #   return
+        if self.start_date.get() == None:
+            mb.showinfo('Notice', 'Enter start date')
+            return
+        elif self.end_date.get() == None:
+            mb.showinfo('Notice', 'Enter end date')
+            return
 
-        # first check for data in database
-        result = requests.get(
-            f"{self.const.server}/investing/stocks/get/{self.api.getName()}_{self.api.getCountry()}/{self.start_date.get().replace('/','')}/{self.end_date.get().replace('/','')}", headers=self.const.headers).json()
-        print("Result: ", result['data'][0]['data'])
+        # get data from investing database
+        self.api.setFromDate(self.start_date.get())
+        self.api.setToDate(self.end_date.get())
 
-        if len(result['data']) > 0:
-            df = pd.DataFrame(result['data'][0]['data'])
-            print('DataFrame: \n', df)
+        # get historical data
+        historical = self.api.getStockData()
 
-            df.drop(df.columns[[0, 6, 7]], axis=1, inplace=True)
-            # draw candles
-            self.const.drawCandles(
-                df, self.api.getName(), self.api.getCountry())
-        else:
-            # update data
-            self.updateData()
-            self.plotData(master)
+        print('Stock: ', self.api.getName())
+        print('Country: ', self.api.getCountry())
+        print('Start Date: ', self.api.getFromDate())
+        print('End Date: ', self.api.getToDate())
+
+        # parse json
+        j = json.loads(historical)
+        data = j['historical']
+
+        # create dataframe
+        df = pd.DataFrame(data)
+        self.const.drawCandles(df, self.api.getName(), self.api.getCountry())
 
     # function to handle updating data in the database server
     def updateData(self):

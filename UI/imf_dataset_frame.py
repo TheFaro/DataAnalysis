@@ -41,8 +41,8 @@ class IMFDataSetFrame(tk.Frame):
         # create widgets
         self.search_text = tk.StringVar()
         self.search_text.set("IMF - DataSets")
-        title = tk.Label(self, textvariable=self.search_text,
-                         width="40").pack(side=tk.TOP)
+        tk.Label(self, textvariable=self.search_text,
+                 width="40").pack(side=tk.TOP)
 
         # search bar
         edit = tk.Entry(self)
@@ -50,12 +50,12 @@ class IMFDataSetFrame(tk.Frame):
         edit.focus_set()
 
         # add search button
-        search_button = tk.Button(self, text='Search', command=lambda: self.setSearchTerm(
+        tk.Button(self, text='Search', command=lambda: self.setSearchTerm(
             edit.get())).pack(side=tk.TOP, pady=15)
 
         # add get all button
-        get_all_button = tk.Button(self, text='Get All Data Sets',
-                                   command=lambda: self.getAll()).pack(side=tk.TOP, pady=10)
+        tk.Button(self, text='Get All Data Sets',
+                  command=lambda: self.getAll()).pack(side=tk.TOP, pady=10)
 
         # define a back button
         back_button = tk.Button(self, text="Back", command=lambda: self.master.switch_frame(

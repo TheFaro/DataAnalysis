@@ -1,6 +1,7 @@
 import tkinter as tk
 import tkinter.messagebox as mb
 from tkinter import ttk
+import investpy
 import pandas as pd
 import datetime
 import json
@@ -123,14 +124,18 @@ class PlotBondsFrame(tk.Frame):
         self.api.setCountry(selected)
 
         # get bonds dict for bonds combobox
-        bonds = self.api.getBondsDict(country=selected)
+        bonds = investpy.get_bonds_dict(country=selected, as_json=True)
+        bonds_list = json.loads(bonds)
+        print('Bonds List: \n', bonds_list)
         temp = []
 
         # for each bond append into combobox values
-        for i, bond in enumerate(bonds):
-            temp.append(bond['name'])
+        for i, bond in enumerate(bonds_list):
+            #print('Index: ', i, '\n', bond)
+            temp.append(bond["name"])
 
-        self.bond['values'] = temp
+        self.bonds['values'] = temp
+        print(self.bonds['value'])
 
     # function to handle the selection bond
     def bondSelected(self, event):
@@ -146,33 +151,26 @@ class PlotBondsFrame(tk.Frame):
         elif self.api.getName() == None or self.api.getName() == "":
             mb.showinfo('Notice', 'Select a bond')
             return
-        '''elif self.start_date.get() == None or self.start_date.get() == "":
+        elif self.start_date.get() == None or self.start_date.get() == "":
             mb.showinfo('Notice', 'Enter start date')
             return
         elif self.end_date.get() == None or self.end_date.get() == "":
             mb.showinfo('Notice', 'Enter end date')
-            return'''
+            return
 
-        # check for date in mongo db server
-        result = requests.get(
-            f"{self.const.server}/investing/bonds/get/{self.api.getName()}_{self.api.getCountry()}/{self.start_date.get().replace('/','')}/{self.end_date.get().replace('/','')}", headers=self.const.headers).json()
-        print('Result for getting:', result['data'][0]['data'])
+        # get data from investing database
+        self.api.setFromDate(self.start_date.get())
+        self.api.setToDate(self.end_date.get())
 
-        if result['success'] == 1:
-            df = pd.DateFrame(result['data'][0]['data'])
-            print('DataFrame: \n', df)
+        historical = self.api.getBondData()
+        j = json.loads(historical)
+        data = j['historical']
 
-            # drop unwanted column // __id
-            df.drop(df.columns[[0]], axis=1, inplace=True)
-
-            # draw candles
-            self.const.drawCandles(
-                df, self.api.getName(), self.api.getCountry())
-        else:
-            self.updateData()
-            self.plotData(master)
+        df = pd.DataFrame(data)
+        self.const.drawCandles(df, self.api.getName(), self.api.getCountry)
 
     # function to handle updating data in database server
+
     def updateData(self):
         # check for bond
         if self.api.getName() == None or self.api.getName() == "":

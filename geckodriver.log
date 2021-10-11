@@ -545,3 +545,560 @@ TimedPromise/<@chrome://marionette/content/sync.js:228:19
 TimedPromise@chrome://marionette/content/sync.js:213:10
 interaction.flushEventLoop@chrome://marionette/content/interaction.js:418:10
 webdriverClickElement@chrome://marionette/content/interaction.js:179:31
+1633862425439	geckodriver	INFO	Listening on 127.0.0.1:50299
+1633862428542	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-no-remote" "-profile" "C:\\Users\\Faro\\AppData\\Local\\Temp\\rust_mozprofilelqOd6X"
+*** You are running in headless mode.
+1633862429068	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Faro\\AppData\\Local\\Temp\\rust_mozprofilelqOd6X\\search.json.mozlz4", (void 0)))
+1633862433223	Marionette	INFO	Listening on port 50307
+1633862434259	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.macrotrends.net/assets/php/jqfiles/jqwidgets/jqxlistbox.js, line 7: unreachable code after return statement
+JavaScript warning: https://www.macrotrends.net/assets/php/jqfiles/jqwidgets/jqxdata.export.js, line 7: unreachable code after return statement
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+1633948100292	geckodriver	INFO	Listening on 127.0.0.1:53243
+1633948103430	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-no-remote" "-profile" "C:\\Users\\Faro\\AppData\\Local\\Temp\\rust_mozprofileJMIFTj"
+*** You are running in headless mode.
+1633948155056	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Faro\\AppData\\Local\\Temp\\rust_mozprofileJMIFTj\\search.json.mozlz4", (void 0)))
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 772))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 419))
+1633948206304	Marionette	INFO	Listening on port 53252
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+" "C:\\Users\\Faro\\AppData\\Local\\Temp\\rust_mozprofileNTBxnc"
+1633948451102	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Faro\\AppData\\Local\\Temp\\rust_mozprofileNTBxnc\\search.json.mozlz4", (void 0)))
+1633948478648	Marionette	INFO	Listening on port 49771
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 772))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 419))
+1633948482066	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.macrotrends.net/assets/php/jqfiles/jqwidgets/jqxlistbox.js, line 7: unreachable code after return statement
+JavaScript warning: https://www.macrotrends.net/assets/php/jqfiles/jqwidgets/jqxdata.export.js, line 7: unreachable code after return statement
+1633948658631	geckodriver	INFO	Listening on 127.0.0.1:56361
+1633948661850	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\Faro\\AppData\\Local\\Temp\\rust_mozprofile1urZXD"
+1633948662678	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Faro\\AppData\\Local\\Temp\\rust_mozprofile1urZXD\\search.json.mozlz4", (void 0)))
+1633948668156	Marionette	INFO	Listening on port 56369
+1633948668265	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 772))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 419))
+JavaScript warning: https://www.macrotrends.net/assets/php/jqfiles/jqwidgets/jqxlistbox.js, line 7: unreachable code after return statement
+JavaScript warning: https://www.macrotrends.net/assets/php/jqfiles/jqwidgets/jqxdata.export.js, line 7: unreachable code after return statement
+JavaScript error: resource://devtools/server/actors/network-monitor/network-event-actor.js, line 109: Error: Got a request https://fonts.googleapis.com/css?family=Roboto:400,700 without a browsingContextID set
+1633949062338	geckodriver	INFO	Listening on 127.0.0.1:65029
+1633949065385	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\Faro\\AppData\\Local\\Temp\\rust_mozprofile2kO4nu"
+1633949067308	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Faro\\AppData\\Local\\Temp\\rust_mozprofile2kO4nu\\search.json.mozlz4", (void 0)))
+1633949073849	Marionette	INFO	Listening on port 65039
+1633949073885	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.macrotrends.net/assets/php/jqfiles/jqwidgets/jqxlistbox.js, line 7: unreachable code after return statement
+JavaScript warning: https://www.macrotrends.net/assets/php/jqfiles/jqwidgets/jqxdata.export.js, line 7: unreachable code after return statement
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1633961707480	geckodriver	INFO	Listening on 127.0.0.1:59442
+1633961710586	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\Faro\\AppData\\Local\\Temp\\rust_mozprofilePrpS92"
+1633961711861	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Faro\\AppData\\Local\\Temp\\rust_mozprofilePrpS92\\search.json.mozlz4", (void 0)))
+1633961717433	Marionette	INFO	Listening on port 59450
+1633961717560	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.macrotrends.net/assets/php/jqfiles/jqwidgets/jqxlistbox.js, line 7: unreachable code after return statement
+JavaScript warning: https://www.macrotrends.net/assets/php/jqfiles/jqwidgets/jqxdata.export.js, line 7: unreachable code after return statement
+JavaScript error: http://www.zacksdata.com/, line 95: ReferenceError: videoHomePageObj is not defined
+JavaScript warning: https://login.ionos.com/assets/js/main.js?unknown, line 16: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: http://www.zacksdata.com/, line 95: ReferenceError: videoHomePageObj is not defined
+1633961944036	geckodriver	INFO	Listening on 127.0.0.1:57391
+1633961947124	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\Faro\\AppData\\Local\\Temp\\rust_mozprofileae0H29"
+1633961947679	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Faro\\AppData\\Local\\Temp\\rust_mozprofileae0H29\\search.json.mozlz4", (void 0)))
+1633961953996	Marionette	INFO	Listening on port 57399
+1633961954909	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.macrotrends.net/assets/php/jqfiles/jqwidgets/jqxlistbox.js, line 7: unreachable code after return statement
+JavaScript warning: https://www.macrotrends.net/assets/php/jqfiles/jqwidgets/jqxdata.export.js, line 7: unreachable code after return statement
+JavaScript error: resource://devtools/server/actors/network-monitor/network-event-actor.js, line 109: Error: Got a request https://fonts.googleapis.com/css?family=Roboto:400,700 without a browsingContextID set
+1633962119918	Marionette	INFO	Stopped listening on port 57399
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+[Parent 8308, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+S certificate errors will be ignored for this session
+1633962122266	Marionette	INFO	Stopped listening on port 51742
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+console.log: "RemoteSettingsWorker error: Error: Can't import when we've started shutting down."
+console.log: "RemoteSettingsWorker error: Error: Can't import when we've started shutting down."
+console.log: "RemoteSettingsWorker error: Error: Can't import when we've started shutting down."
+console.log: "RemoteSettingsWorker error: Error: Can't import when we've started shutting down."
+console.error: "Could not load engine google@search.mozilla.org: [Exception... \"AddonManager is not initialized\"  nsresult: \"0xc1f30001 (NS_ERROR_NOT_INITIALIZED)\"  location: \"JS frame :: resource://gre/modules/AddonManager.jsm :: installBuiltinAddon :: line 2526\"  data: no]"
+console.error: "Could not load engine amazondotcom@search.mozilla.org: [Exception... \"AddonManager is not initialized\"  nsresult: \"0xc1f30001 (NS_ERROR_NOT_INITIALIZED)\"  location: \"JS frame :: resource://gre/modules/AddonManager.jsm :: installBuiltinAddon :: line 2526\"  data: no]"
+console.error: "Could not load engine wikipedia@search.mozilla.org: [Exception... \"AddonManager is not initialized\"  nsresult: \"0xc1f30001 (NS_ERROR_NOT_INITIALIZED)\"  location: \"JS frame :: resource://gre/modules/AddonManager.jsm :: installBuiltinAddon :: line 2526\"  data: no]"
+console.error: "Could not load engine bing@search.mozilla.org: [Exception... \"AddonManager is not initialized\"  nsresult: \"0xc1f30001 (NS_ERROR_NOT_INITIALIZED)\"  location: \"JS frame :: resource://gre/modules/AddonManager.jsm :: installBuiltinAddon :: line 2526\"  data: no]"
+console.error: "Could not load engine ddg@search.mozilla.org: [Exception... \"AddonManager is not initialized\"  nsresult: \"0xc1f30001 (NS_ERROR_NOT_INITIALIZED)\"  location: \"JS frame :: resource://gre/modules/AddonManager.jsm :: installBuiltinAddon :: line 2526\"  data: no]"
+console.warn: SearchService: "_init: abandoning init due to shutting down"
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: uncaught exception: 2147500036
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: uncaught exception: 2147500036
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: uncaught exception: 2147500036
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: uncaught exception: 2147500036
+console.log: "RemoteSettingsWorker error: Error: Can't import when we've started shutting down."
+console.log: "RemoteSettingsWorker error: Error: Can't import when we've started shutting down."
+JavaScript error: , line 0: uncaught exception: 2147500036
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 718: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "DoHController: clear state and remove observers"
+JavaScript error: resource://gre/modules/CrashManager.jsm, line 829: AbortError: IOUtils: Shutting down and refusing additional I/O tasks
+la Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\Faro\\AppData\\Local\\Temp\\rust_mozprofileNjb6Xl"
+1633962140037	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Faro\\AppData\\Local\\Temp\\rust_mozprofileNjb6Xl\\search.json.mozlz4", (void 0)))
+1633962146088	Marionette	INFO	Listening on port 51785
+1633962146904	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.macrotrends.net/assets/php/jqfiles/jqwidgets/jqxlistbox.js, line 7: unreachable code after return statement
+JavaScript warning: https://www.macrotrends.net/assets/php/jqfiles/jqwidgets/jqxdata.export.js, line 7: unreachable code after return statement
+JavaScript error: resource://devtools/server/actors/network-monitor/network-event-actor.js, line 109: Error: Got a request https://fonts.googleapis.com/css?family=Roboto:400,700 without a browsingContextID set
+1633962319498	geckodriver	INFO	Listening on 127.0.0.1:52264
+1633962322564	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\Faro\\AppData\\Local\\Temp\\rust_mozprofileAUQGp4"
+1633962323276	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Faro\\AppData\\Local\\Temp\\rust_mozprofileAUQGp4\\search.json.mozlz4", (void 0)))
+1633962328796	Marionette	INFO	Listening on port 52272
+1633962328905	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.macrotrends.net/assets/php/jqfiles/jqwidgets/jqxlistbox.js, line 7: unreachable code after return statement
+JavaScript warning: https://www.macrotrends.net/assets/php/jqfiles/jqwidgets/jqxdata.export.js, line 7: unreachable code after return statement
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1633963069176	geckodriver	INFO	Listening on 127.0.0.1:53335
+1633963072293	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\Faro\\AppData\\Local\\Temp\\rust_mozprofileKDXSaP"
+1633963072865	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Faro\\AppData\\Local\\Temp\\rust_mozprofileKDXSaP\\search.json.mozlz4", (void 0)))
+1633963078238	Marionette	INFO	Listening on port 53343
+1633963078915	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.macrotrends.net/assets/php/jqfiles/jqwidgets/jqxlistbox.js, line 7: unreachable code after return statement
+JavaScript warning: https://www.macrotrends.net/assets/php/jqfiles/jqwidgets/jqxdata.export.js, line 7: unreachable code after return statement
+1633963276046	geckodriver	INFO	Listening on 127.0.0.1:61799
+1633963279117	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\Faro\\AppData\\Local\\Temp\\rust_mozprofile6fWcpt"
+1633963279649	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Faro\\AppData\\Local\\Temp\\rust_mozprofile6fWcpt\\search.json.mozlz4", (void 0)))
+1633963285610	Marionette	INFO	Listening on port 61807
+1633963286643	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.macrotrends.net/assets/php/jqfiles/jqwidgets/jqxlistbox.js, line 7: unreachable code after return statement
+JavaScript warning: https://www.macrotrends.net/assets/php/jqfiles/jqwidgets/jqxdata.export.js, line 7: unreachable code after return statement
+1633963464867	geckodriver	INFO	Listening on 127.0.0.1:61422
+1633963467934	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\Faro\\AppData\\Local\\Temp\\rust_mozprofileHPHlAY"
+1633963468632	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Faro\\AppData\\Local\\Temp\\rust_mozprofileHPHlAY\\search.json.mozlz4", (void 0)))
+1633963473821	Marionette	INFO	Listening on port 61431
+1633963474718	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+Marionette threw an error: TypeError: this.curBrowser.contentBrowser is null
+GeckoDriver.prototype.navigateTo@chrome://remote/content/marionette/driver.js:806:3
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1633963688479	geckodriver	INFO	Listening on 127.0.0.1:50606
+1633963691553	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\Faro\\AppData\\Local\\Temp\\rust_mozprofileXzWZQs"
+1633963692064	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Faro\\AppData\\Local\\Temp\\rust_mozprofileXzWZQs\\search.json.mozlz4", (void 0)))
+1633963697114	Marionette	INFO	Listening on port 50615
+1633963697645	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.macrotrends.net/assets/php/jqfiles/jqwidgets/jqxlistbox.js, line 7: unreachable code after return statement
+JavaScript warning: https://www.macrotrends.net/assets/php/jqfiles/jqwidgets/jqxdata.export.js, line 7: unreachable code after return statement
+1633963788540	geckodriver	INFO	Listening on 127.0.0.1:61959
+1633963791652	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\Faro\\AppData\\Local\\Temp\\rust_mozprofileflQanA"
+1633963792138	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Faro\\AppData\\Local\\Temp\\rust_mozprofileflQanA\\search.json.mozlz4", (void 0)))
+1633963797598	Marionette	INFO	Listening on port 61968
+1633963798388	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.macrotrends.net/assets/php/jqfiles/jqwidgets/jqxlistbox.js, line 7: unreachable code after return statement
+JavaScript warning: https://www.macrotrends.net/assets/php/jqfiles/jqwidgets/jqxdata.export.js, line 7: unreachable code after return statement
+1633963936082	geckodriver	INFO	Listening on 127.0.0.1:58324
+1633963939163	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\Faro\\AppData\\Local\\Temp\\rust_mozprofileOg7lT8"
+1633963939755	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Faro\\AppData\\Local\\Temp\\rust_mozprofileOg7lT8\\search.json.mozlz4", (void 0)))
+1633963945509	Marionette	INFO	Listening on port 58334
+1633963945616	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.macrotrends.net/assets/php/jqfiles/jqwidgets/jqxlistbox.js, line 7: unreachable code after return statement
+JavaScript warning: https://www.macrotrends.net/assets/php/jqfiles/jqwidgets/jqxdata.export.js, line 7: unreachable code after return statement
+JavaScript error: resource://devtools/server/actors/network-monitor/network-event-actor.js, line 109: Error: Got a request https://fonts.googleapis.com/css?family=Roboto:400,700 without a browsingContextID set
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+n: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Faro\\AppData\\Local\\Temp\\rust_mozprofilegEZGpP\\search.json.mozlz4", (void 0)))
+1633964156950	Marionette	INFO	Listening on port 52787
+1633964157072	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 772))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 419))
+1633964187453	Marionette	INFO	Stopped listening on port 52787
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x390146,name=PContent::Msg_ReportFrameTimingData) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590006,name=PHttpChannel::Msg_DocumentChannelCleanup) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1633964376986	geckodriver	INFO	Listening on 127.0.0.1:64896
+1633964380218	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\Faro\\AppData\\Local\\Temp\\rust_mozprofileB3BT3X"
+1633964380802	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Faro\\AppData\\Local\\Temp\\rust_mozprofileB3BT3X\\search.json.mozlz4", (void 0)))
+1633964386311	Marionette	INFO	Listening on port 64904
+1633964387024	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.macrotrends.net/assets/php/jqfiles/jqwidgets/jqxlistbox.js, line 7: unreachable code after return statement
+JavaScript warning: https://www.macrotrends.net/assets/php/jqfiles/jqwidgets/jqxdata.export.js, line 7: unreachable code after return statement
+1633964544646	geckodriver	INFO	Listening on 127.0.0.1:53808
+1633964547804	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\Faro\\AppData\\Local\\Temp\\rust_mozprofileVyFObr"
+1633964548369	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Faro\\AppData\\Local\\Temp\\rust_mozprofileVyFObr\\search.json.mozlz4", (void 0)))
+1633964553683	Marionette	INFO	Listening on port 53816
+1633964554421	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.macrotrends.net/assets/php/jqfiles/jqwidgets/jqxlistbox.js, line 7: unreachable code after return statement
+JavaScript warning: https://www.macrotrends.net/assets/php/jqfiles/jqwidgets/jqxdata.export.js, line 7: unreachable code after return statement
+1633964758172	geckodriver	INFO	Listening on 127.0.0.1:64007
+1633964761218	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\Faro\\AppData\\Local\\Temp\\rust_mozprofileYpPquN"
+1633964761818	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Faro\\AppData\\Local\\Temp\\rust_mozprofileYpPquN\\search.json.mozlz4", (void 0)))
+1633964767686	Marionette	INFO	Listening on port 64497
+1633964768585	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.macrotrends.net/assets/php/jqfiles/jqwidgets/jqxlistbox.js, line 7: unreachable code after return statement
+JavaScript warning: https://www.macrotrends.net/assets/php/jqfiles/jqwidgets/jqxdata.export.js, line 7: unreachable code after return statement
+1633964861316	geckodriver	INFO	Listening on 127.0.0.1:64443
+1633964864402	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\Faro\\AppData\\Local\\Temp\\rust_mozprofileLOWoki"
+1633964864942	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Faro\\AppData\\Local\\Temp\\rust_mozprofileLOWoki\\search.json.mozlz4", (void 0)))
+1633964873008	Marionette	INFO	Listening on port 64451
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 772))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 419))
+1633964873785	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.macrotrends.net/assets/php/jqfiles/jqwidgets/jqxlistbox.js, line 7: unreachable code after return statement
+JavaScript warning: https://www.macrotrends.net/assets/php/jqfiles/jqwidgets/jqxdata.export.js, line 7: unreachable code after return statement
+1633965727237	geckodriver	INFO	Listening on 127.0.0.1:60907
+1633965730332	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\Faro\\AppData\\Local\\Temp\\rust_mozprofileHBb1ep"
+1633965730936	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Faro\\AppData\\Local\\Temp\\rust_mozprofileHBb1ep\\search.json.mozlz4", (void 0)))
+1633965736811	Marionette	INFO	Listening on port 60915
+1633965737304	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+Marionette threw an error: TypeError: this.curBrowser.contentBrowser is null
+GeckoDriver.prototype.navigateTo@chrome://remote/content/marionette/driver.js:806:3
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x390146,name=PContent::Msg_ReportFrameTimingData) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590006,name=PHttpChannel::Msg_DocumentChannelCleanup) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1633965863123	Marionette	INFO	Stopped listening on port 60915
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1633965868341	geckodriver	INFO	Listening on 127.0.0.1:57615
+1633965871440	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\Faro\\AppData\\Local\\Temp\\rust_mozprofile0jJqRe"
+1633965871960	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Faro\\AppData\\Local\\Temp\\rust_mozprofile0jJqRe\\search.json.mozlz4", (void 0)))
+1633965877702	Marionette	INFO	Listening on port 61114
+1633965877837	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 772))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 419))
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x390146,name=PContent::Msg_ReportFrameTimingData) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590006,name=PHttpChannel::Msg_DocumentChannelCleanup) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1633966060595	Marionette	INFO	Stopped listening on port 61114
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1633966109409	geckodriver	INFO	Listening on 127.0.0.1:61730
+1633966112495	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\Faro\\AppData\\Local\\Temp\\rust_mozprofileDjKVyV"
+1633966112989	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Faro\\AppData\\Local\\Temp\\rust_mozprofileDjKVyV\\search.json.mozlz4", (void 0)))
+1633966119130	Marionette	INFO	Listening on port 61739
+1633966119542	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.macrotrends.net/assets/php/jqfiles/jqwidgets/jqxlistbox.js, line 7: unreachable code after return statement
+JavaScript warning: https://www.macrotrends.net/assets/php/jqfiles/jqwidgets/jqxdata.export.js, line 7: unreachable code after return statement
+1633966336946	Marionette	INFO	Stopped listening on port 61739
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 718: Error: Phase "Sqlite.jsm: wait until all connections are closed" is finished, it is too late to register completion condition "protections.sqlite#0: waiting for shutdown"

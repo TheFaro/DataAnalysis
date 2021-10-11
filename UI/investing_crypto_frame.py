@@ -119,32 +119,28 @@ class PlotCryptosFrame(tk.Frame):
         if self.api.getName() == None or self.api.getName() == "":
             mb.showinfo('Notice', 'Select a crypto')
             return
-        # elif self.start_date.get() == None or self.start_date.get() == "":
-        #    mb.showinfo('Notice', 'Enter start date')
-        #    return
-        # elif self.end_date.get() == None or self.end_date.get() == "":
-        #    mb.showinfo('Notice', 'Enter end date')
-        #    return
+        elif self.start_date.get() == None or self.start_date.get() == "":
+            mb.showinfo('Notice', 'Enter start date')
+            return
+        elif self.end_date.get() == None or self.end_date.get() == "":
+            mb.showinfo('Notice', 'Enter end date')
+            return
 
-        # check for date in mongo db server
-        result = requests.get(
-            f"{self.const.server}/investing/crypto/get/{self.api.getName()}_{self.api.getCountry()}/{self.start_date.get().replace('/','')}/{self.end_date.get().replace('/','')}", headers=self.const.headers).json()
-        print('Result for getting:', result['data'][0]['data'])
+        # get data from investing database
+        self.api.setFromDate(self.start_date.get())
+        self.api.setToDate(self.end_date.get())
 
-        if result['success'] == 1:
-            df = pd.DataFrame(result['data'][0]['data'])
-            print('DataFrame: \n', df)
+        # get historical data
+        historical = self.api.getCryptoData()
+        j = json.loads(historical)
+        data = j['historical']
 
-            df.drop(df.columns[[0, 6, 7]], axis=1, inplace=True)
-            # draw candles
-            self.const.drawCandles(
-                df, self.api.getName(), self.api.getCountry())
-
-        else:
-            self.updateData()
-            self.plotData(master)
+        # create dataframe
+        df = pd.DataFrame(data)
+        self.const.drawCandles(df, self.api.getName(), '')
 
     # function to handle updating data in database server
+
     def updateData(self):
         # check for crypto
         if self.api.getName() == None or self.api.getName() == "":

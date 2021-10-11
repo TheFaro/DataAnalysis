@@ -20,7 +20,8 @@ class MacroTrendsAPI:
         # retrieve macrotrends stock screener page using selenium
         opts = Options()
         opts.add_argument('-headless')
-        self.browser = Firefox(options=opts)
+        self.browser = Firefox(
+            executable_path=r'D:\WORK\Python\DataAnalysis\resources\gecko_driver\geckodriver.exe')
         self.browser.get('https://www.macrotrends.net/stocks/stock-screener')
 
         sleep(2)
@@ -106,11 +107,24 @@ class MacroTrendsAPI:
     def parseTable(self, browser):
         self.col_headers = []
         self.col_data = []
+        table = []
+
+        # find table with selenium
+        results = browser.find_element_by_id('contextjqxGrid')
+        print('\n', results, '\n')
 
         # get table
-        self.soup = BeautifulSoup(browser.page_source, 'lxml')
-        table = self.soup.find(id='contextjqxGrid')
-        col_table = table.find(id='columntablejqxGrid')
+        self.soup = BeautifulSoup(
+            browser.page_source, 'html.parser')  # 'lxml')
+
+        # printing from soup
+        print('Soup printed : \n', self.soup.find_all(
+            id="contentjqxGrid"))
+        self.soup = self.soup.find_all(id="contextjqxGrid")
+
+        # displaying contents from table
+        print('Table: \n', self.soup)
+        col_table = table.find(id="columntablejqxGrid")
 
         # get table data
         for key, element in enumerate(list(col_table.children)):
@@ -119,7 +133,7 @@ class MacroTrendsAPI:
             self.col_data.append([])
 
         # get data under the headers
-        table_data = table.find(id='contenttablejqxGrid')
+        table_data = table.find(id="contenttablejqxGrid")
         for key, element in enumerate(list(table_data.children)):
             for key1, item in enumerate(list(element.children)):
                 print(item.text)

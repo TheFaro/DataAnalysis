@@ -50,7 +50,7 @@ class ChooseDataSourceFrame(tk.Frame):
                 api = macrotrends_data.MacroTrendsAPI(master)
                 selection = 'columns_overview'
                 api.getTable(selection)
-                # master.switch_frame(MacrotrendsMenu)
+                # master.switch_frame(macrotrends_data.MacrotrendsMenu)
 
             elif index == 2:
                 # choose investing.com as a datasource

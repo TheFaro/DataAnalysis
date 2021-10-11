@@ -117,20 +117,22 @@ class PlotCrossesFrame(tk.Frame):
         if self.api.getName() == None or self.api.getName() == '':
             mb.showinfo('Notice', 'Select an Currency Cross')
             return
-        '''elif self.start_date.get() == None or self.start_date.get() == '':
+        elif self.start_date.get() == None or self.start_date.get() == '':
             mb.showinfo('Notice', 'Enter start date')
             return
         elif self.end_date.get() == None or self.end_date.get() == '':
             mb.showinfo('Notice', 'Enter end date')
             return
-        '''
 
+        '''
         # check for data in mongo db server
         result = requests.get(
             f"{self.const.server}/investing/currency_crosses/get/{self.api.getName()}_{self.api.getCountry()}/{self.start_date.get().replace('/','')}/{self.end_date.get().replace('/','')}", headers=self.const.headers).json()
 
         print('Result for getting:', result['data'][0]['data'])
-
+        '''
+        ''' result = []
+        result['success'] = 0
         if result['success'] == 1:
             df = pd.DataFrame(result['data'][0]['data'])
             print('DataFrame: \n', df)
@@ -144,9 +146,25 @@ class PlotCrossesFrame(tk.Frame):
                 df, self.api.getName(), self.api.getCountry())
         else:
             self.updateData()
-            self.plotData(master)
+            self.plotData(master)'''
+
+        # get data from online database and print
+        self.api.setFromDate(self.start_date.get())
+        self.api.setToDate(self.end_date.get())
+        #now = datetime.datetime.now()
+        # self.api.setToDate(now.strftime('%d/%m/%Y')) oritginal code
+
+        historical = self.api.getCrossesData()
+        j = json.loads(historical)
+        data = j['historical']
+
+        # create dataframe from dataset
+        df = pd.DataFrame(data)
+        print('DataFrame: \n', df)
+        self.const.drawCandles(df, self.api.getName(), self.api.getCountry())
 
     # function to update data in database server
+
     def updateData(self):
         # check for index name and country name
         if self.api.getName() == None or self.api.getName() == "":
@@ -204,3 +222,5 @@ class PlotCrossesFrame(tk.Frame):
 
         elif recent.status_code == 400 or recent.status_code == 500:
             mb.showinfo('Notice', recent.json()['message'])
+
+    # function

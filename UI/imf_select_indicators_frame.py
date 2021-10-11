@@ -45,10 +45,11 @@ class SelectIndicatorsFrame(tk.Frame):
         print(self.master.IMF_var[2])
 
         data_processor = imf_data_processor.IMFDataProcessor(self.master)
-        data_processor.getIMFDataFromServer()
+        data_processor.getData()
+        # data_processor.getIMFDataFromServer()
         print(data_processor.total_df)
 
-        if data_processor.total_df.empty == False:
+        if data_processor.total_df == None or data_processor.total_df.empty == False:
             ax = sb.lineplot(data=data_processor.total_df)
             ax.set(xlabel="Date", ylabel="Symbol")
             plt.show()

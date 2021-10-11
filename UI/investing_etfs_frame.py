@@ -147,33 +147,34 @@ class PlotEtfsFrame(tk.Frame):
             return
 
         # check start date and end date
-        # if self.start_date.get() == None or self.start_date.get() == "":
-        #    mb.showinfo('Notice', "Specify start date")
-        #    return
-        # elif self.end_date.get() == None or self.end_date.get() == "":
-        #    mb.showinfo('Notice', "Specify end date")
-        #    return
+        if self.start_date.get() == None or self.start_date.get() == "":
+            mb.showinfo('Notice', "Specify start date")
+            return
+        elif self.end_date.get() == None or self.end_date.get() == "":
+            mb.showinfo('Notice', "Specify end date")
+            return
 
-        # check data in database
-        result = requests.post(
-            f"{self.const.server}/investing/etfs/get/{self.api.getName()}_{self.api.getCountry()}/{self.start_date.get().replace('/','')}/{self.end_date.get().replace('/','')}", headers=self.const.headers).json()
-        print("Result for getting: ", result['data'][0]['data'])
+        # retrieve data from investing database
+        self.api.setFromDate(self.start_date.get())
+        self.api.setToDate(self.end_date.get())
 
-        if result['success'] == 1:
-            df = pd.DataFrame(result['data'][0]['data'])
-            print('DataFrame: \n', df)
+        # get historical data
+        historical = self.api.getEtfData()
+        print(historical)
 
-            df.drop(df.column[[0, 5, 6, 7]], axis=1, inplace=True)
+        # parse json
+        j = json.loads(historical)
+        data = j['historical']
 
-            # draw candles
-            self.const.drawCandles(
-                df, self.api.getName(), self.api.getCountry())
+        # create dataframe from dataset
+        df = pd.DataFrame(data)
+        print('DataFrame: \n', df)
 
-        else:
-            self.updateData()
-            self.plotData(master)
+        # draw candles
+        self.const.drawCandles(df, self.api.getName(), self.api.getCountry())
 
     # function to update data in database server
+
     def updateData(self):
         # check etf and country name
         if self.api.getCountry() == None or self.api.getCountry() == "":

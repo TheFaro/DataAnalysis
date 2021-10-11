@@ -5,6 +5,7 @@ import pandas as pd
 import datetime
 import requests
 import json
+import investpy
 
 import investing_funds_api
 import constants as const
@@ -153,32 +154,33 @@ class PlotFundsFrame(tk.Frame):
             return
 
         # check start date and end date
-        '''if self.start_date.get() == None:
+        if self.start_date.get() == None:
             mb.showinfo('Notice', 'Enter start date')
             return
         elif self.end_date.get() == None:
-            mb.showinfo('Notice', 'Enter end date')  
-            return'''
+            mb.showinfo('Notice', 'Enter end date')
+            return
 
-        # first check for data in database
-        result = requests.get(
-            f"{self.const.server}/investing/funds/get/{self.api.getName()}_{self.api.getCountry()}/{self.start_date.get().replace('/','')}/{self.end_date.get().replace('/','')}", headers=self.const.headers).json()
-        print('Result for getting:', result['data'][0]['data'])
+        # retrieve data from invesing database
+        # set dates
+        self.api.setFromDate(self.start_date.get())
+        self.api.setToDate(self.end_date.get())
 
-        if result['success'] == 1:
-            df = pd.DataFrame(result['data'][0]['data'])
-            print('DataFrame: \n', df)
+        # get historical data
+        historical = self.api.getFundData()
+        print(historical)
 
-            # dropping unnecessary columns
-            df.drop(df.columns[[0, 6, 7]], axis=1, inplace=True)
+        # parse json
+        j = json.loads(historical)
+        data = j['historical']
 
-            # draw candles
-            self.const.drawCandles(
-                df, self.api.getName(), self.api.getCountry())
-        else:
-            # update data
-            self.updateData()
-            self.plotData(master)
+        # create dataframe from dataset
+        df = pd.DataFrame(data)
+        print('DataFrame: \n', df)
+
+        # draw candles
+        self.const.drawCandles(
+            df, self.api.getName(), self.api.getCountry())
 
     # function to handle updating data in the database server
     def updateData(self):
